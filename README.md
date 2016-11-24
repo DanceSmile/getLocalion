@@ -40,29 +40,52 @@ if(navigator.geolocation){
 
 ```
 //获取用户当前位置
-navigator.geolocation.getCurrentPosition(onsuccess,onerror,option);
+navigator.geolocation.getCurrentPosition(onSuccess,onError,option);
 
 //监听用户位置  持续获取用户当前位置
-navigator.geolocation.watchCurrentPosition(onsuccess,onerror,option)
+navigator.geolocation.watchCurrentPosition(onSuccess,onError,option)
 
 //取消监听
 navigator.geolocation.clearWatch(watchID)
 
 ```
 
-### onsuccess onerroe  option  参数说明
+### onSuccess onError  option  参数说明
 
 ```
 //onSuccess方法成功时调用的(必选)，onError方法失败是调用的(可选)，options其他参数(可选)
+
+//onSuccess 的 属性值有很多 ，常用的有获取坐标的经纬度
+
+function onSuccess(positon){
+
+     //返回用户位置
+    //经度
+     var longitude =position.coords.longitude;
+    //纬度
+    var latitude = position.coords.latitude;
+
+}
+
+
+
 options = {
      enableHighAccuracy,　　　//boolean 是否要求高精度的地理信息
      timeout,　　　　　　　　　//表示等待响应的最大时间，默认是0毫秒，表示无穷时间
-     maximumAge　　　　　　　　/应用程序的缓存时间
+     maximumAge　　　　　　　　//应用程序的缓存时间
 }
 
 ```
 
+> 获取当前位置加上偏移量会准一点 <br>
+>经度+经度校正值： 0.008774687519; <br>
+>纬度+纬度校正值： 0.00374531687912;
 > doc  By DanceSmile
+
+
+
+
+
 
 
 

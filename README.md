@@ -67,8 +67,6 @@ function onSuccess(positon){
 
 }
 
-
-
 options = {
      enableHighAccuracy,　　　//boolean 是否要求高精度的地理信息
      timeout,　　　　　　　　　//表示等待响应的最大时间，默认是0毫秒，表示无穷时间
@@ -78,9 +76,9 @@ options = {
 ```
 
 > 获取当前位置加上偏移量会准一点 <br>
->经度+经度校正值： 0.008774687519; <br>
->纬度+纬度校正值： 0.00374531687912;
-> doc  By DanceSmile
+> 经度+经度校正值： 0.008774687519; <br>
+> 纬度+纬度校正值： 0.00374531687912;<br>
+> doc  By DanceSmile<br>
 
 
 

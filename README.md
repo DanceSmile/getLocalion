@@ -26,14 +26,10 @@ Maemo
 ## 检测浏览器是否支持
 
 ```
-if(navigator.geolocation){
-
+if ( navigator.geolocation ) {
     console.log("浏览器支持");
-
 }else{
-
     console.log("浏览器不支持");
-
 }
 
 ```

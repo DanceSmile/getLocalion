@@ -36,6 +36,8 @@
                var longitude =position.coords.longitude;
                //纬度
                var latitude = position.coords.latitude;
+
+               alert(latitude+longitude);
            }
   
 
@@ -117,10 +119,38 @@
 
 
             // 添加标记点
-            var center  = L.marker([0, 0],{title:""});
-            center.addTo(map)
-            center.on('click',function(){
+            var center  = L.marker([0, 0],{
+                title:"",
+                draggable:true
+            });
+            
+            // 标记添加到地图
+            center.addTo(map);
 
+            // 拖动标记事件开始
+            center.on("dragstart",function(){
+
+                console.log("鼠标拖动事件");
+                
+            })
+
+            // 鼠标持续拖动事件
+            center.on('drag',function(){
+
+                console.log("鼠标持续拖动事件");
+
+            })
+
+             // 鼠标持续拖动事件结束
+            center.on('dragend',function(){
+
+                console.log("鼠标持续拖动事件结束");
+
+            })
+
+            // 鼠标点击事件开始
+            center.on('click',function(){
+                console.log("鼠标点击事件");
             })
 
 
@@ -134,12 +164,11 @@
 
             // 触发地图的点击事件
             map.on('click', function(e) {
-                 console.log(e.latlng); // e is an event object (MouseEvent in this case)
                  L.marker(e.latlng).addTo(map);
             });
 
 
-           //window.onload=getLocation;
+           window.onload=getLocation;
    
     </script>
 </html>

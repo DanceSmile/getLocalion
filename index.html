@@ -9,7 +9,9 @@
     </head>
     <body>
         <div id="map">
-            
+                <div style="width:200px;height:200px;background:red;z-index:2">
+
+                </div>
         </div>
     </body>
 
@@ -97,22 +99,33 @@
 
             var imgHeight = img.height;
 
-            var myIcon = L.icon({
-                iconUrl: 'my-icon.png',
-                iconRetinaUrl: 'my-icon@2x.png',
-                iconSize: [38, 95],
-                iconAnchor: [22, 94],
-                popupAnchor: [-3, -76],
-                shadowUrl: 'my-icon-shadow.png',
-                shadowRetinaUrl: 'my-icon-shadow@2x.png',
-                shadowSize: [68, 95],
-                shadowAnchor: [22, 94]
-            });
+            // 1.使用图片自定义icon标记图标
+            // var myIcon = L.icon({
+            //     iconUrl: 'my-icon.png',
+            //     iconRetinaUrl: 'my-icon@2x.png',
+            //     iconSize: [38, 95],
+            //     iconAnchor: [22, 94],
+            //     popupAnchor: [-3, -76],
+            //     shadowUrl: 'my-icon-shadow.png',
+            //     shadowRetinaUrl: 'my-icon-shadow@2x.png',
+            //     shadowSize: [68, 95],
+            //     shadowAnchor: [22, 94]
+            // });
 
-    L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
+            // 2.使用div自定义标记点
+            var myIcon = L.divIcon({className: 'my-div-icon'});
+             // you can set .my-div-icon styles in CSS
+             L.marker([0, 0], {icon: myIcon}).addTo(map);
+
 
             // 添加标记点
-            L.marker([0, 0]).addTo(map);
+            var center  = L.marker([0, 0],{title:""});
+            center.addTo(map)
+            center.on('click',function(){
+
+            })
+
+
 
 
             // 添加图片到地图

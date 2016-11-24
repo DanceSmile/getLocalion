@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>getLocation map  by danceSmile</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
@@ -96,6 +96,20 @@
             var imgWidth = img.width;
 
             var imgHeight = img.height;
+
+            var myIcon = L.icon({
+                iconUrl: 'my-icon.png',
+                iconRetinaUrl: 'my-icon@2x.png',
+                iconSize: [38, 95],
+                iconAnchor: [22, 94],
+                popupAnchor: [-3, -76],
+                shadowUrl: 'my-icon-shadow.png',
+                shadowRetinaUrl: 'my-icon-shadow@2x.png',
+                shadowSize: [68, 95],
+                shadowAnchor: [22, 94]
+            });
+
+    L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 
             // 添加标记点
             L.marker([0, 0]).addTo(map);

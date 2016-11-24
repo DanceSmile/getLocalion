@@ -9,9 +9,7 @@
     </head>
     <body>
         <div id="map">
-                <div style="width:200px;height:200px;background:red;z-index:2">
-
-                </div>
+                
         </div>
     </body>
 
@@ -76,11 +74,11 @@
             //    设置缩放的最小值
                minZoom : -2,
 
-            //    设置地图放大的最大值
+            //    设置地图放大的最大值W
                maxZoom : 2,
 
             //    设置初始化的缩放值
-               zoom:0,
+               zoom:2,
                
 
             //    设置地图中心点
@@ -102,8 +100,8 @@
             // 1.使用图片自定义icon标记图标
             // var myIcon = L.icon({
             //     iconUrl: 'my-icon.png',
-            //     iconRetinaUrl: 'my-icon@2x.png',
-            //     iconSize: [38, 95],
+            //     iconRetinaUrl: 'my-icon@2x.pngW',
+            //     iconSize: [38, 95],W
             //     iconAnchor: [22, 94],
             //     popupAnchor: [-3, -76],
             //     shadowUrl: 'my-icon-shadow.png',
@@ -115,7 +113,7 @@
             // 2.使用div自定义标记点
             var myIcon = L.divIcon({className: 'my-div-icon'});
              // you can set .my-div-icon styles in CSS
-             L.marker([0, 0], {icon: myIcon}).addTo(map);
+            //  L.marker([0, 0], {icon: myIcon}).addTo(map);
 
 
             // 添加标记点

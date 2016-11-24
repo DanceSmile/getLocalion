@@ -51,7 +51,7 @@ navigator.geolocation.clearWatch(watchID)
 
 ```
 
-### onSuccess onError  option  参数说明
+### onSuccess , onError , option  参数说明
 
 ```
 //onSuccess方法成功时调用的(必选)，onError方法失败是调用的(可选)，options其他参数(可选)

@@ -3,9 +3,9 @@ html5网页获取地理位置
 
 HTML5 Geolocation API (地理位置应用程序接口)
 
-目前PC浏览器支持情况：
+## 目前PC浏览器支持情况：
 
-Firefox 3.5+
+>Firefox 3.5+
 Chrome 5.0+
 Safari 5.0+
 Opera 10.60+
@@ -37,7 +37,6 @@ navigator.geolocation.getCurrentPosition(onsuccess,onerror,option);
 
 //监听用户位置  持续获取用户当前位置
 navigator.geolocation.watchCurrentPosition(onsuccess,onerror,option)
-
 
 //取消监听
 navigator.geolocation.clearWatch(watchID)

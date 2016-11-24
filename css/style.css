@@ -7,12 +7,12 @@ html, body, #map {
     width: 100vw;
 }
 
-#map{
+/*#map{
     margin:0px auto;
     height: 500px;
     width: 500px;
     border:10px solid #eee;
-}
+}*/
 .my-div-icon{
     width: 20px;
     height: 25px;

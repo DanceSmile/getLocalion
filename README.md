@@ -27,10 +27,15 @@ Maemo
 
 ```
 if(navigator.geolocation){
+
     console.log("浏览器支持");
+
 }else{
+
     console.log("浏览器不支持");
+
 }
+
 ```
 
 
@@ -59,11 +64,11 @@ navigator.geolocation.clearWatch(watchID)
 
 function onSuccess(positon){
 
-     //返回用户位置
+    //返回用户位置
     //经度
-     var longitude =position.coords.longitude;
+    var longitude = position.coords.longitude;
     //纬度
-    var latitude = position.coords.latitude;
+    var latitude       = position.coords.latitude;
 
 }
 

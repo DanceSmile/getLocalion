@@ -61,18 +61,59 @@
 
            }
 
-
-
            // Leaflet on Mobile
-           var map = L.map('map').fitWorld();
+           //    实例地图类
+           var map = L.map('map',{
 
-           var imageUrl   =  './img/map.png';
-            imageBounds   =  [[40.712216, -74.22655], [40.773941, -74.12544]];
+            //    修改坐标系
+               crs : L.CRS.Simple,
 
-            L.imageOverlay(imageUrl, imageBounds).addTo(map);
+            //    设置最大拖动边界
+               maxBounds : [[-456.5,-443],[456.5,443]],
+
+            //    设置缩放的最小值
+               minZoom : -2,
+
+            //    设置地图放大的最大值
+               maxZoom : 2,
+
+            //    设置初始化的缩放值
+               zoom:0,
+               
+
+            //    设置地图中心点
+               center:[0,0],
+
+            })
+
+            // 获取图片的长宽
+            var imageUrl = './img/map.png';
+
+            var img = new Image();
+
+            img.src = imageUrl;
+
+            var imgWidth = img.width;
+
+            var imgHeight = img.height;
+
+            // 添加标记点
+            L.marker([0, 0]).addTo(map);
 
 
-           
+            // 添加图片到地图
+            L.imageOverlay(imageUrl,[[-456.5,-448],[456.5,443]]).addTo(map);
+
+            // 地图显示此边界的值
+            // map.fitBounds([[-456.5,-443],[456.5,443]])
+
+            // 触发地图的点击事件
+            map.on('click', function(e) {
+                 console.log(e.latlng); // e is an event object (MouseEvent in this case)
+                 L.marker(e.latlng).addTo(map);
+            });
+
+
            //window.onload=getLocation;
    
     </script>

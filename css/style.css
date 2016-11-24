@@ -8,7 +8,7 @@ html, body, #map {
 }
 
 #map{
-    margin:200px auto;
+    margin:0px auto;
     height: 500px;
     width: 500px;
     border:10px solid #eee;

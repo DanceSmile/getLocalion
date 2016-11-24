@@ -7,8 +7,12 @@
         <link href="./css/style.css" rel="stylesheet">
     </head>
     <body>
-    
+        <div id="map">
+            
+        </div>
     </body>
+
+    <script src="http://cdn.bootcss.com/leaflet/1.0.2/leaflet.js"></script>
     <script>
            function getLocation(){
                var options={
@@ -61,13 +65,14 @@
            // Leaflet on Mobile
            var map = L.map('map').fitWorld();
 
-            L.tileLayer('https://api.tiles.mapbox.com/v4/MapID/997/256/{z}/{x}/{y}.png?access_token={accessToken}', {
-                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-                maxZoom: 18
-            }).addTo(map);
+           var imageUrl   =  './img/map.png';
+            imageBounds   =  [[40.712216, -74.22655], [40.773941, -74.12544]];
+
+            L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
 
            
-           window.onload=getLocation;
+           //window.onload=getLocation;
    
     </script>
 </html>

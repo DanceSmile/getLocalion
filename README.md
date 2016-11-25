@@ -1,12 +1,12 @@
-# getLocalion
+# getLocation
 
 html5网页获取地理位置
 
 
 HTML5 Geolocation API (地理位置应用程序接口)
 
-## 目前PC浏览器支持情况：
-
+## 目前PC浏览器支持情况：Location
+Location
 >Firefox 3.5+
 Chrome 5.0+
 Safari 5.0+

@@ -44,7 +44,7 @@ if ( navigator.geolocation ) {
 navigator.geolocation.getCurrentPosition(onSuccess,onError,option);
 
 //监听用户位置  持续获取用户当前位置
-navigator.geolocation.watchCurrentPosition(onSuccess,onError,option)
+navigator.geolocation.watchPosition(onSuccess,onError,option)
 
 //取消监听
 navigator.geolocation.clearWatch(watchID)

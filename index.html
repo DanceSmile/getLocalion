@@ -134,6 +134,23 @@
                 
             })
 
+            // 批量添加标记点
+            var marker1 = L.marker([20,20]);
+            var marker2 = L.marker([30,30]);
+            var marker3 = L.marker([40,40]);
+            var marker4 = L.marker([50,50]);
+            var marker5 = L.marker([60,60]);
+            var marker6 = L.marker([70,70]);
+            var marker7 = L.marker([80,80]);
+            var marker8 = L.marker([90,90]);
+            var marker9 = L.marker([100,100]);
+            
+            var  marker = [];
+            L.layerGroup([marker1, marker2,marker3, marker4,marker5, marker6,marker7, marker8,marker9])
+               
+                .addTo(map);
+
+
             // 鼠标持续拖动事件
             center.on('drag',function(){
 
